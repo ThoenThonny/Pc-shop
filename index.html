@@ -8,90 +8,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <style>
-    body {
-      width: 100%;
-      height: auto;
-    }
-
-    .header {
-      width: 100%;
-      height: 12vh;
-    }
-
-    .carousel-item img {
-      height: 80vh;
-      object-fit: cover;
-    }
-
-    /* Responsive Hero text */
-    .hero-caption {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-   
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 600px;
-    }
-
-    .hero-caption h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-    }
-
-    .hero-caption p {
-      font-size: clamp(0.9rem, 2vw, 1.2rem);
-    }
-
-    .hero-caption .btn {
-      font-size: clamp(0.9rem, 1.5vw, 1rem);
-    }
-    \.carousel-item img {
-  height: 80vh; /* Default for desktop */
-  object-fit: cover;
-}
-
-/* Tablet screens */
-@media (min-width: 768px) and (max-width: 991px) {
-  .carousel-item img {
-    height: 55vh; /* Smaller height on tablets */
-  }
-}
-
-/* Mobile screens */
-@media (max-width: 767px) {
-  .carousel-item img {
-    height: 55vh; /* Even smaller on phones */
-  }
-}
-
-  </style>
+<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <!-- Header -->
-  <nav class="header navbar navbar-dark bg-dark fixed-top navbar-expand-lg px-md-4">
+  <nav  class="header navbar navbar-dark bg-dark fixed-top navbar-expand-lg px-md-4">
     <div class="container-fluid">
-      <a class="navbar-brand fs-2" href="#">Pc-Shop</a>
+      <a class="navbar-brand fs-2 fw-medium" href="#"><i>Pc-Shop</i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end text-bg-dark w-75" tabindex="-1" id="offcanvasDarkNavbar">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title">Pc-Shop</h5>
+          <h5 class="offcanvas-title fw-medium"><i>Pc-Shop</i></h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center align-items-center gap-3 flex-grow-1 pe-3">
-            <li class="nav-item"><a class="nav-link fs-5" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link fs-5" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link fs-5" href="#">Menu</a></li>
-            <li class="nav-item"><a class="nav-link fs-5" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#carouselExampleDark">Home</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#aboute">About</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#footer">Contact</a></li>
           </ul>
           <form class="d-flex align-items-center gap-3 mt-3 mt-lg-0" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" />
@@ -145,6 +84,163 @@
           <a href="#" class="btn btn-warning btn-lg mt-2">Shop Now</a>
         </div>
   </div>
+
+  <!-- Aboute -->
+
+  <div id="aboute" class="w-100 h-auto py-4 ">
+  <div class="container">
+    <!-- Section Title -->
+    <h2 class=" text-center mb-4">About Our Store</h2>
+
+    <!-- Features Row -->
+    <div class="row g-4 text-center">
+      
+      <!-- Feature 1 -->
+      <div class="col-12 col-sm-6 col-lg-3 h-25">
+        <div class=" text-white rounded-3 p-4 h-100 d-flex flex-column align-items-center justify-content-center shadow">
+          <i class="bi bi-truck display-3 mb-3 text-warning"></i>
+          <h5 class="fw-bold text-black">Free Delivery</h5>
+          <p class="small mb-0 text-black">Fast & reliable shipping for every order.</p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-12 col-sm-6 col-lg-3 h-25">
+        <div class=" text-white rounded-3 p-4 h-100 d-flex flex-column align-items-center justify-content-center shadow">
+          <i class="bi bi-headset display-3 mb-3 text-info"></i>
+          <h5 class="fw-bold text-black">24/7 Support</h5>
+          <p class="small mb-0 text-black">We’re here anytime to help you out.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-12 col-sm-6 col-lg-3 h-25">
+        <div class=" text-white rounded-3 p-4 h-100 d-flex flex-column align-items-center justify-content-center shadow">
+          <i class="bi bi-shield-check display-3 mb-3 text-success"></i>
+          <h5 class="fw-bold text-black">Warranty Guarantee</h5>
+          <p class="small mb-0 text-black">products come with a trusted warranty.</p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-12 col-sm-6 col-lg-3 h-25">
+        <div class=" text-white rounded-3 p-4 h-100 d-flex flex-column align-items-center justify-content-center shadow">
+          <i class="bi bi-credit-card display-3 mb-3 text-danger"></i>
+          <h5 class="fw-bold text-black">Secure Payment</h5>
+          <p class="small mb-0 text-black">Multiple safe & easy payment options.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Menu Page -->
+<div id="menu" class="container py-4">
+  <h2 class="text-center mb-4">Our Menu</h2>
+  <div class="row g-4">
+    
+    <!-- Item 1 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100">
+        <img src="https://zestrogaming.com/wp-content/uploads/2023/11/aa-768x768.png" class="card-img-top  item object-fit-cover" alt="Gaming Case">
+        <div class="card-body">
+          <h5 class="card-title">Gaming Case</h5>
+          <p class="card-text">Thor 1.2 – Corei7 14th Gen & RTX 5070 12GB. Photos may approximate the look of the final build.</p>
+          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100">
+        <img src="https://www.pcworld.com/wp-content/uploads/2025/04/alienware-gaming-laptop.jpg?quality=50&strip=all&w=1024" class="card-img-top item object-fit-cover" alt="Gaming Laptop">
+        <div class="card-body">
+          <h5 class="card-title">Gaming Laptop</h5>
+          <p class="card-text">High performance gaming laptop with Intel i9, RTX 4080, and 32GB RAM for smooth gameplay.</p>
+          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100">
+        <img src="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" class="card-img-top  item object-fit-cover" alt="Mechanical Keyboard">
+        <div class="card-body">
+          <h5 class="card-title">Mechanical Keyboard</h5>
+          <p class="card-text">RGB mechanical keyboard with blue switches, durable keycaps, and customizable lighting.</p>
+          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100">
+        <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1500_.jpg" class="card-img-top  item object-fit-cover" alt="Gaming Headset">
+        <div class="card-body">
+          <h5 class="card-title">Gaming Headset</h5>
+          <p class="card-text">Surround sound gaming headset with noise-canceling mic, deep bass, and soft ear cushions.</p>
+          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ <!-- Footer -->
+<footer id="footer" class="bg-dark text-light pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- About -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h5 class="fw-bold mb-3">Pc-Shop</h5>
+        <p class="small">Your one-stop shop for high-performance PCs, laptops, and gaming accessories. Build your dream setup with us.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#carouselExampleDark" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#aboute" class="text-light text-decoration-none">About</a></li>
+          <li><a href="#menu" class="text-light text-decoration-none">Menu</a></li>
+          <li><a href="#footer" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h5 class="fw-bold mb-3">Contact Us</h5>
+        <p class="small mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Phnom Penh, Cambodia</p>
+        <p class="small mb-1"><i class="bi bi-telephone-fill me-2"></i> +855 96 340 3471</p>
+        <p class="small mb-0"><i class="bi bi-envelope-fill me-2"></i> support@pcshop.com</p>
+      </div>
+      
+      <!-- Social Media -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-light fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-light fs-4"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Bottom -->
+    <hr class="border-light mt-4">
+    <div class="text-center small">
+      &copy; 2025 Pc-Shop. All rights reserved.
+    </div>
+  </div>
+</footer>
+
 </body>
 
 </html>
