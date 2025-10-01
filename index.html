@@ -15,7 +15,7 @@
   <!-- Header -->
   <nav  class="header navbar navbar-dark bg-dark fixed-top navbar-expand-lg px-md-4">
     <div class="container-fluid">
-      <a class="navbar-brand fs-2 fw-medium" href="#"><i>Pc-Shop</i></a>
+      <a class="navbar-brand fs-2 fw-medium" href="#"><i>Pc & Phone-Shop</i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,8 +33,13 @@
             <li class="nav-item"><a class="nav-link fs-5" href="#footer">Contact</a></li>
           </ul>
           <form class="d-flex align-items-center gap-3 mt-3 mt-lg-0" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" />
-            <i class="bi bi-cart-dash fs-2"></i>
+            <input id="search-product" class="form-control me-2" type="search" placeholder="Search" />
+            <div class=" position-relative">
+              <i style="cursor: pointer;" class="bi bi-cart-dash fs-2" data-bs-toggle="offcanvas"  data-bs-target="#offcanvasScrolling" ></i>
+              <div class="  active-cart">
+                0
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -79,9 +84,9 @@
       <span class="carousel-control-next-icon bg-dark"></span>
     </button>
     <div class="hero-caption">
-          <h1>Build Your Dream PC</h1>
+          <h1>Build Your Dream PC And Phone</h1>
           <p>High-performance desktops, laptops, and accessories at the best prices.</p>
-          <a href="#" class="btn btn-warning btn-lg mt-2">Shop Now</a>
+          <a href="#menu" class="btn btn-warning btn-lg mt-2">Shop Now</a>
         </div>
   </div>
 
@@ -137,56 +142,9 @@
 <!-- Menu Page -->
 <div id="menu" class="container py-4">
   <h2 class="text-center mb-4">Our Menu</h2>
-  <div class="row g-4">
+  <div id="show-product" class="row g-4">
     
-    <!-- Item 1 -->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="card h-100">
-        <img src="https://zestrogaming.com/wp-content/uploads/2023/11/aa-768x768.png" class="card-img-top  item object-fit-cover" alt="Gaming Case">
-        <div class="card-body">
-          <h5 class="card-title">Gaming Case</h5>
-          <p class="card-text">Thor 1.2 – Corei7 14th Gen & RTX 5070 12GB. Photos may approximate the look of the final build.</p>
-          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="card h-100">
-        <img src="https://www.pcworld.com/wp-content/uploads/2025/04/alienware-gaming-laptop.jpg?quality=50&strip=all&w=1024" class="card-img-top item object-fit-cover" alt="Gaming Laptop">
-        <div class="card-body">
-          <h5 class="card-title">Gaming Laptop</h5>
-          <p class="card-text">High performance gaming laptop with Intel i9, RTX 4080, and 32GB RAM for smooth gameplay.</p>
-          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="card h-100">
-        <img src="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" class="card-img-top  item object-fit-cover" alt="Mechanical Keyboard">
-        <div class="card-body">
-          <h5 class="card-title">Mechanical Keyboard</h5>
-          <p class="card-text">RGB mechanical keyboard with blue switches, durable keycaps, and customizable lighting.</p>
-          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="card h-100">
-        <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1500_.jpg" class="card-img-top  item object-fit-cover" alt="Gaming Headset">
-        <div class="card-body">
-          <h5 class="card-title">Gaming Headset</h5>
-          <p class="card-text">Surround sound gaming headset with noise-canceling mic, deep bass, and soft ear cushions.</p>
-          <a href="#" class="btn btn-primary w-100">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-
+ 
   </div>
 </div>
 
@@ -240,7 +198,47 @@
     </div>
   </div>
 </footer>
+<!-- Offcanvas Cart -->
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+  id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+      <i class="bi bi-cart4"></i> Your Cart
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column">
+
+    <!-- Cart Item -->
+    <div class="d-flex align-items-center mb-3 border-bottom pb-2">
+      <img src="https://zestrogaming.com/wp-content/uploads/2023/11/aa-768x768.png" width="60" height="60" class="rounded me-3 object-fit-cover" alt="Gaming Case">
+      <div class="flex-grow-1">
+        <h6 class="mb-1">Gaming Case</h6>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">$1200</small>
+          <div class="input-group input-group-sm" style="width:100px;">
+            <button class="btn btn-outline-secondary">-</button>
+            <input type="text" class="form-control text-center" value="1">
+            <button class="btn btn-outline-secondary">+</button>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i></button>
+    </div>
+
+   
+    <!-- Cart Summary -->
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between fw-bold fs-5 border-top pt-3">
+        <span>Total:</span>
+        <span class=" text-success">$1360</span>
+      </div>
+      <button class="btn btn-warning w-100 mt-3">Checkout</button>
+    </div>
+  </div>
+</div>
 
 </body>
-
+<script  src="./data..js"></script>
 </html>

@@ -60,3 +60,14 @@
 .item{
   height: 60%;
 }
+.active-cart{
+  width: 19px;
+  height: 19px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  top: 5%;
+  right: -9%;
+}
