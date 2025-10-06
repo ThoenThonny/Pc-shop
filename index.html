@@ -15,14 +15,14 @@
   <!-- Header -->
   <nav  class="header navbar navbar-dark bg-dark fixed-top navbar-expand-lg px-md-4">
     <div class="container-fluid">
-      <a class="navbar-brand fs-2 fw-medium" href="#"><i>Pc & Phone-Shop</i></a>
+      <a class="navbar-brand fs-2 fw-medium" href="#"><i>Apple-Shop</i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end text-bg-dark w-75" tabindex="-1" id="offcanvasDarkNavbar">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title fw-medium"><i>Pc-Shop</i></h5>
+          <h5 class="offcanvas-title fw-medium"><i>Apple-Shop</i></h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -34,9 +34,10 @@
           </ul>
           <form class="d-flex align-items-center gap-3 mt-3 mt-lg-0" role="search">
             <input id="search-product" class="form-control me-2" type="search" placeholder="Search" />
+            
             <div class=" position-relative">
               <i style="cursor: pointer;" class="bi bi-cart-dash fs-2" data-bs-toggle="offcanvas"  data-bs-target="#offcanvasScrolling" ></i>
-              <div class="  active-cart">
+              <div id="cartCount" class="active-cart">
                 0
               </div>
             </div>
@@ -155,7 +156,7 @@
       
       <!-- About -->
       <div class="col-12 col-sm-6 col-lg-3">
-        <h5 class="fw-bold mb-3">Pc-Shop</h5>
+        <h5 class="fw-bold mb-3">Apple-Shop</h5>
         <p class="small">Your one-stop shop for high-performance PCs, laptops, and gaming accessories. Build your dream setup with us.</p>
       </div>
       
@@ -207,35 +208,15 @@
     </h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-
-  <div class="offcanvas-body d-flex flex-column">
+  
+  <div id="cartItem" class="offcanvas-body d-flex flex-column">
 
     <!-- Cart Item -->
-    <div class="d-flex align-items-center mb-3 border-bottom pb-2">
-      <img src="https://zestrogaming.com/wp-content/uploads/2023/11/aa-768x768.png" width="60" height="60" class="rounded me-3 object-fit-cover" alt="Gaming Case">
-      <div class="flex-grow-1">
-        <h6 class="mb-1">Gaming Case</h6>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">$1200</small>
-          <div class="input-group input-group-sm" style="width:100px;">
-            <button class="btn btn-outline-secondary">-</button>
-            <input type="text" class="form-control text-center" value="1">
-            <button class="btn btn-outline-secondary">+</button>
-          </div>
-        </div>
-      </div>
-      <button class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i></button>
-    </div>
-
    
+
+  
     <!-- Cart Summary -->
-    <div class="mt-auto">
-      <div class="d-flex justify-content-between fw-bold fs-5 border-top pt-3">
-        <span>Total:</span>
-        <span class=" text-success">$1360</span>
-      </div>
-      <button class="btn btn-warning w-100 mt-3">Checkout</button>
-    </div>
+    
   </div>
 </div>
 
