@@ -21,6 +21,8 @@ const Displayproducts = (product = cart) => {
 `
   })
   document.getElementById('show-product').innerHTML = show;
+  UpdatecardItem()
+  
 }
 
 fetch("https://lanhphalla03.github.io/Iphone_APi/card.json")
@@ -78,7 +80,12 @@ const UpdatecardItem = () => {
   let show=``
   let totalprice=0
   if (cartItem.length === 0) {
-    show+= `fghjkl`
+    show += `
+      <div class="w-100 h-auto text-center p-3">
+        <i class="bi bi-cart-x fs-1 text-secondary"></i>
+        <h4 class="text-danger-emphasis mt-2">Your Cart Is Empty</h4>
+      </div>
+    `
   }else{
     
     cartItem.forEach(item=>{
@@ -91,13 +98,13 @@ const UpdatecardItem = () => {
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${item.price}$</small>
           <div class="input-group input-group-sm" style="width:100px;">
-            <button class="btn btn-outline-secondary">-</button>
-            <input type="text" class="form-control text-center" value="1">
-            <button class="btn btn-outline-secondary">+</button>
+            <button onclick="Updatequantity(${item.id}, -1)"  class="btn btn-outline-secondary">-</button>
+            <input type="text" class="form-control text-center" value="${item.quantity}" readonly>
+            <button onclick="Updatequantity(${item.id},1)" class="btn btn-outline-secondary">+</button>
           </div>
         </div>
       </div>
-      <button class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i></button>
+      <button onclick="Removefromcart(${item.id},1)" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i></button>
     </div>
     
     
@@ -114,5 +121,26 @@ const UpdatecardItem = () => {
       <button class="btn btn-warning w-100 mt-3">Checkout</button>
     </div>`
   }
-  displaycart.innerHTML=show
+   displaycart.innerHTML = show
+     
+}
+
+// Update quantity
+
+const Updatequantity = (productId,chang)=>{
+    const item = cartItem.find(i =>i.id===productId);
+    if(item){
+      item.quantity+=chang;
+      if(item.quantity<1){
+        Removefromcart(productId)
+      }else{
+        UpdatecardItem()
+      }
+    }
+}
+
+const Removefromcart = (productId) =>{
+cartItem = cartItem.filter(i =>i.id !==productId);
+  UpdatecardItem();
+  
 }
