@@ -118,7 +118,7 @@ const UpdatecardItem = () => {
         <span>Total:</span>
         <span class=" text-success">${totalprice}$</span>
       </div>
-      <button class="btn btn-warning w-100 mt-3">Checkout</button>
+      <button onclick="Checkout()" class="btn btn-warning w-100 mt-3">Checkout</button>
     </div>`
   }
    displaycart.innerHTML = show
@@ -143,4 +143,20 @@ const Removefromcart = (productId) =>{
 cartItem = cartItem.filter(i =>i.id !==productId);
   UpdatecardItem();
   
+}
+
+// Check Out
+
+const Checkout = () =>{
+ 
+  Swal.fire({
+  title: "Thank For Oder ",
+  icon: "success",
+  draggable: true
+
+}).then(()=>{
+  cartItem=[]
+  UpdatecardItem()
+})
+
 }
