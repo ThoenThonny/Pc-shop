@@ -64,8 +64,13 @@ const AddtoCart = (productId) => {
   } else {
     cartItem.push({...product, quantity : 1})
   }
-  alert(`${product.name} Added to Cart`)
+  Swal.fire({
+  title: `${product.name} Add To Cart Please Check Your Cart`,
+  icon: "success",
+  draggable: true
+});
   UpdatecardItem()
+ 
 
 }
 
